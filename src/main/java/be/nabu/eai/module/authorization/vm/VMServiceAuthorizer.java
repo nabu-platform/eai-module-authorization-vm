@@ -22,7 +22,6 @@ public class VMServiceAuthorizer implements ServiceAuthorizer {
 		ServiceRuntime child = new ServiceRuntime(authorizationService, runtime.getExecutionContext());
 		try {
 			ComplexContent output = child.run(input);
-			System.out.println("RAN THE SERVICE: " + output);
 			return output == null || output.get("isAllowed") == null || (Boolean) output.get("isAllowed");
 		}
 		catch (ServiceException e) {
