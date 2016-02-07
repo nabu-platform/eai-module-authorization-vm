@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
 
+import be.nabu.eai.module.services.iface.ServiceInterfaceManager;
+import be.nabu.eai.module.services.vm.VMServiceManager;
 import be.nabu.eai.repository.EAIRepositoryUtils;
 import be.nabu.eai.repository.api.ResourceEntry;
-import be.nabu.eai.repository.managers.ServiceInterfaceManager;
-import be.nabu.eai.repository.managers.VMServiceManager;
 import be.nabu.libs.property.ValueUtils;
 import be.nabu.libs.resources.ResourceReadableContainer;
 import be.nabu.libs.resources.api.ReadableResource;
