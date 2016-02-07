@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
 
+import be.nabu.eai.repository.EAIRepositoryUtils;
 import be.nabu.eai.repository.api.ResourceEntry;
 import be.nabu.eai.repository.managers.ServiceInterfaceManager;
 import be.nabu.eai.repository.managers.VMServiceManager;
@@ -64,7 +65,7 @@ public class VMAuthorizationManager extends VMServiceManager {
 		Pipeline pipeline = new ServiceInterfaceManager().loadPipeline(entry, messages);
 
 		// next we load the root sequence
-		Sequence sequence = parseSequence(new ResourceReadableContainer((ReadableResource) getResource(entry, "service.xml", false)));
+		Sequence sequence = parseSequence(new ResourceReadableContainer((ReadableResource) EAIRepositoryUtils.getResource(entry, "service.xml", false)));
 		
 		final DefinedServiceInterface iface = ValueUtils.getValue(PipelineInterfaceProperty.getInstance(), pipeline.getProperties());
 		if (iface == null) {
