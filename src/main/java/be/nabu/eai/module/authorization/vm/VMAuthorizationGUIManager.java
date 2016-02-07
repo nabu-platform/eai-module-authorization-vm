@@ -39,12 +39,12 @@ public class VMAuthorizationGUIManager extends VMServiceGUIManager {
 
 	@Override
 	public String getCategory() {
-		return "Authorization";
+		return "Services";
 	}
 
 	@Override
 	public String getArtifactName() {
-		return "Authorization Service";
+		return "Flow Authorization Service";
 	}
 
 	@Override
