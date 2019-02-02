@@ -44,7 +44,7 @@ public class VMAuthorizationGUIManager extends VMServiceGUIManager {
 
 	@Override
 	public String getArtifactName() {
-		return "Flow Authorization Service";
+		return "Blox Authorization Service";
 	}
 
 	@Override
