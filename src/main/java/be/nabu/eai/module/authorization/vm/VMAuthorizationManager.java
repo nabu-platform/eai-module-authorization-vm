@@ -77,6 +77,7 @@ public class VMAuthorizationManager extends VMServiceManager {
 		VMAuthorizationService service = new VMAuthorizationService(pipeline);
 		service.setRoot(sequence);
 		service.setId(entry.getId());
+		service.setDescription(VMServiceManager.loadDescription(entry));
 		return service;
 	}
 
